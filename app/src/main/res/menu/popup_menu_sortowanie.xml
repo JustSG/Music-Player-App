@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sortNazwa" android:title="Nazwa" />
+    <item android:id="@+id/sortDlugosc" android:title="Długość" />
+    <item android:id="@+id/sortOdtworzenia" android:title="Odtworzenia" />
+    <item android:id="@+id/sortData" android:title="Data dodania" />
+    <item android:id="@+id/sortWykonawca" android:title="Wykonawca" />
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/x20" android:title="2x"/>
+    <item android:id="@+id/x15" android:title="1.5x"/>
+    <item android:id="@+id/x12" android:title="1.2x"/>
+    <item android:id="@+id/x10" android:title="1x"/>
+    <item android:id="@+id/x05" android:title="0.5x"/>
+</menu>

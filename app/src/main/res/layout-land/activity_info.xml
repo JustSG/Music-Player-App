@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tlo"
+    tools:context=".InfoActivity">
+
+    <ImageView
+        android:id="@+id/imageViewWrocI"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/wroc" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewIkonaI"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:shapeAppearance="@style/roundViewImage"
+        app:layout_constraintEnd_toStartOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewNazwaI"
+        app:srcCompat="@drawable/icon_pusty"/>
+
+    <TextView
+        android:id="@+id/textViewNazwaI"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Nazwa"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIkonaI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/divider"
+        app:layout_constraintBottom_toTopOf="@id/textViewWykonawcaI"/>
+
+    <TextView
+        android:id="@+id/textViewWykonawcaI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wykonawca"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNazwaI"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/szary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/linear2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/divider">
+
+        <TextView
+            android:id="@+id/textViewCzasInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Długość utworu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewCzasI"/>
+
+        <TextView
+            android:id="@+id/textViewCzasI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintBottom_toTopOf="@id/linear3"
+        app:layout_constraintStart_toEndOf="@id/divider">
+
+        <TextView
+            android:id="@+id/textViewTypInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Typ pliku"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewTypI"/>
+
+        <TextView
+            android:id="@+id/textViewTypI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mp4"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear2"
+        app:layout_constraintBottom_toTopOf="@id/linear4"
+        app:layout_constraintStart_toEndOf="@id/divider">
+
+        <TextView
+            android:id="@+id/textViewRozmiarInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rozmiar pliku"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewRozmiarI"/>
+
+        <TextView
+            android:id="@+id/textViewRozmiarI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.4TB"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/divider">
+
+        <TextView
+            android:id="@+id/textViewSciezkaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ścieżka pliku"
+            app:layout_constraintBottom_toTopOf="@id/textViewSciezkaI"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSciezkaI"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="C:\"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
